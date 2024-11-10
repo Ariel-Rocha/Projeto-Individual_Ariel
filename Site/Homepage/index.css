@@ -1,0 +1,82 @@
+
+/* Estilos para o layout do header */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+body {
+    color: white;
+    background-image: url('imagens/fundo_home.png');
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem no fundo ao rolar a página */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+}
+/*logo tipo da pagina */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 90px; /* Aumente para o tamanho desejado */
+}
+
+.logo h2 {
+    font-size: 32px;
+}
+
+.logo h2 span {
+    color: yellow;
+}
+
+/* Centralize a navbar */
+
+.menu {
+    background-color: rgba(144, 238, 144, 0.8); /* Verde folha */
+    padding: 20px 40px; /* Ajusta o espaço interno */
+    border-radius: 30px; /* Arredonda as bordas */
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 15px; /* Espaçamento entre os links */
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    font-family: 'Ringbearer', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+/*fonte do O senhor dos anéis */
+@font-face {
+    font-family: 'Ringbearer';
+    src: url('Fonte-Ringbearer/RINGM___.TTF') format('truetype');
+}
+.menu a:hover {
+    color: #000;
+}

@@ -10,32 +10,63 @@
 
 <body>
     <header>
-     
-            <div class="logo">
-                <img src="imagens/logo.png" alt="Logo Hobbit's House">
-                <h2>Hobbit's <span>House</span></h2>
-            </div>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="cadastro.html">Cadastro</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="calculadora.html">Calculadora</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="sobremim.html">Sobre mim</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-    </header>
-    <div class="container-home">
-        <div class="container-texto">
-            <h1 id="titulo">Hobbit <span id="tituloAmarelo">House</span></h1>
-            <h3 id="subtitulo">Descubra o<br>"Condado"<span id="subtituloAmarelo"></span><br>Onde há<br>Conforto na<br>Simplicidade</h3>
-            <p id="slogan">O universo da Terra-Média em suas mãos</p>
+        <!--logo da pagina-->
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo Hobbit's House">
+            <h2>Hobbit <span>House</span></h2>
         </div>
-    </div>
+        <!-- menu da pagina, a sua nabvar-->
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../Cadastro/cadastro.html">Cadastro</a></li>
+                    <li><a href="../Login/login.html">Login</a></li>
+                    <li><a href="../Calculadora/calculadora.html">Calculadora</a></li>
+                    <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="../Sobre mim/sobremim.html">Sobre mim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Secção de titulo da homepage-->
+    <section class="sobre">
+        <div class="container-home">
+            <div id="titulo">
+                <p>Descubra o</p>
+                <p><span class="textoDourado">"Condado"</span></p>
+                <p>Onde há</p>
+                <p>Conforto na</p>
+                <p>Simplicidade</p>
+            </div>
+            <p id="slogan">O universo da Terra-Média à um clique de você</p>
+        </div>
+
+        <!--Botões da homepage-->
+        <div class="botoes">
+            <a href="#saibamais" class="botao">Saiba Mais</a>
+            <a href="../Cadastro/cadastro.html" class="botao">Junte-se à "Sociedade"</a>
+        </div>
+
+        <div class="scroll-down">&#2193;</div>
+        <div style="height: 110vh;"></div>
+    </section>
+
+
+
+
+    <section id="saibamais">
+        <h2>Bem-vindo ao Condado</h2>
+        <p>Explore a Terra-Média e descubra os encantos de Hobbiton,
+            a simplicidade da vida no campo e a história que molda o destino
+            dos grandes heróis.</p>
+    </section>
+
+
+    <footer>
+        <p> &copy; 2024 Hobbit House. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>

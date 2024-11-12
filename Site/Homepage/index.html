@@ -30,6 +30,12 @@
         </div>
     </header>
 
+   <div class="sound-icon" onclick="toggleSound()">
+    <img src="imagens/som-on.png" alt="Som Ligado" id="sound-image" width="60" height="60">
+   </div>
+    <audio id="theme-audio" src="audio/Concerning Hobbits (Howard Shore) - Music Video - Lord of the Rings.mp3"
+        loop></audio>
+
     <!--Secção de titulo da homepage-->
     <section class="sobre">
         <div class="container-home">
@@ -45,28 +51,90 @@
 
         <!--Botões da homepage-->
         <div class="botoes">
-            <a href="#saibamais" class="botao">Saiba Mais</a>
+            <a href="#saibaMais" class="botao">Saiba Mais</a>
             <a href="../Cadastro/cadastro.html" class="botao">Junte-se à "Sociedade"</a>
         </div>
 
         <div class="scroll-down">&#2193;</div>
-        <div style="height: 110vh;"></div>
+        <div style="height: 70vh;"></div>
     </section>
 
 
 
 
-    <section id="saibamais">
-        <h2>Bem-vindo ao Condado</h2>
-        <p>Explore a Terra-Média e descubra os encantos de Hobbiton,
-            a simplicidade da vida no campo e a história que molda o destino
-            dos grandes heróis.</p>
+    <section id="saibaMais">
+        <div class="texto-intro">
+            <h2>Bem-vindo ao Condado - A cidade de "Hobbiton" - Auckland, Nova Zelândia</h2><br><br>
+            <p>Imagine um lugar onde o tempo desacelera,<br> onde colinas verdes se estendem até o horizonte,<br>
+                pontuadas por portas redondas coloridas e jardins floridos.<br> Esse lugar encantador não é apenas uma
+                fantasia – ele existe e espera por você em Hobbiton,<br> uma vila Hobbit localizada na pitoresca ilha
+                norte da Nova Zelândia, em Auckland.<br> Conhecida mundialmente por suas aparições em O Senhor dos Anéis
+                e O Hobbit,<br> Hobbiton oferece uma experiência mágica que transporta<br> visitantes direto para o
+                coração da Terra-Média.<br></p>
+            <p>
+                Embarque em uma jornada através das trilhas de Hobbiton, onde você poderá explorar as famosas tocas dos
+                Hobbits,<br> sentir o ar puro da Nova Zelândia e admirar a autêntica decoração do set de filmagem,
+                cuidadosamente preservado para manter o encanto dos filmes.<br> Passeie pelas pequenas ruelas e veja de
+                perto a porta verde da casa de Bilbo e Frodo Bolseiro,<br> uma das paradas obrigatórias. Para completar,
+                visite a charmosa Taverna Green Dragon,<br> onde você poderá desfrutar de uma bebida artesanal inspirada
+                no universo de Tolkien,<br>com uma vista deslumbrante das paisagens ao redor.<br>
+            </p>
+            <p>
+                O passeio por Hobbiton não é apenas uma visita; é uma imersão no mundo de Tolkien,<br> uma oportunidade
+                de se desconectar do cotidiano e se deixar levar por um cenário de contos de fadas.<br> Guias
+                experientes estão prontos para compartilhar histórias e curiosidades das filmagens, oferecendo detalhes
+                que tornam a experiência ainda mais fascinante.<br><br>
+            </p>
+            <p>
+                Para reservar seu tour e vivenciar toda a magia de Hobbiton,<br> acesse os sites oficiais de turismo da
+                Nova Zelândia e da própria Hobbiton:<br>
+            </p><br>
+            <ul>
+                <li><a href=" https://www.hellotickets.com.br/nova-zelandia/auckland/passeios-turisticos-set-filme-hobbiton/sc-189-1216"
+                        target="_blank">HelloTickets</a></li>
+                <li><a href="https://www.hobbitontours.com" target="_blank">Hobbiton Tours</a></li>
+            </ul>
+        </div><br>
+
+        <div class="imagem-intro">
+            <video width="100%" height="auto" controls>
+                <source src="video/video-hobbiton.mp4" type="video/mp4">
+                Um tour pela cidade de Hobbiton.
+            </video>
+        </div>
     </section>
 
 
     <footer>
         <p> &copy; 2024 Hobbit House. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const audio = document.getElementById("theme-audio");
+        const soundImage = document.getElementById("sound-image");
+        let isPlaying = false;
+    
+        function toggleSound() {
+            if (isPlaying) {
+                audio.pause();
+                soundImage.src= "imagens/som-off.png";
+                soundImage.alt = "Som Desligado";
+            } else {
+                audio.play();
+                soundImage.src="imagens/som-on.png";
+                soundImage.alt = "Som Ligado";
+            }
+            isPlaying = !isPlaying; 
+            console.log("Imagem atual: ", soundImage.src); 
+    }
+        
+    
+        window.addEventListener("load", () => {
+            audio.pause();
+            soundImage.src = "imagens/som-off.png"; 
+            soundImage.alt = "Som Desligado";
+        });
+    </script>
 </body>
 
 </html>

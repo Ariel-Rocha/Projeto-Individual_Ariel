@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -65,6 +69,24 @@ header {
     margin: 0;
 }
 
+.sound-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 10px;
+}
+.sound-icon img {
+    width: 90px;
+    height: 90px;
+}
+.sound-icon:hover {
+    transform: scale(1.1);
+}
 nav a {
     font-family: 'Ringbearer', serif;
     color: white;
@@ -175,19 +197,45 @@ nav a {
     border: 3px solid rgba(0, 0, 0, 0.3);
 }
 
-.elemento-problematico {
-    display: none;
-}
+
 /* Seção Saiba Mais */
 #saibaMais {
+    display: flex;
+    align-items: center;
+    gap: 100px;
     padding: 50px 20px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    text-align: center;
-    margin-top: 40px;
+    margin: 40px;
     border-radius: 15px;
 }
+a {
+    color: #DAA520; /* Cor branca, por exemplo */
+    text-decoration: none; /* Remove o sublinhado */
+}
 
+/* Altera a cor dos links quando o usuário passa o mouse */
+a:hover {
+    color: #FFFFFF; /* Cor dourada ao passar o mouse */
+}
+.texto-intro {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+}
+.imagem-intro {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+.imagem-intro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
 /* Footer */
 footer {
     background-color: #3B5323;
